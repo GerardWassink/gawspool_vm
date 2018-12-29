@@ -1,22 +1,16 @@
 #!/bin/bash
-
-LOGFILE="/home/pi/log.prt"
 if [ "$#" != 1 ]
 then
-  echo "$0 - Invalid number of arguments" >>${LOGFILE}
   exit
 fi
-echo "$0 - Changing directory to $1" >>${LOGFILE}
 cd $1
 for i in *.txt
 do
   JOBNAME=`grep -m 1 'SPOOL FILE NAME' $i | cut -c34-41 | sed 's/\s//g'`
   JOBNUM=`grep -m 1 'SPOOL FILE ID' $i | cut -c34-37 | sed 's/\s//g'`
   if ([ ! -z ${JOBNAME} ]); then
-    echo "$0 Wil convert $i into ${JOBNUM}-${JOBNAME}.pdf" >>${LOGFILE}
     enscript --quiet --font=Courier@8 -l -H1 -r --margins=25:25:40:40 -p - ${i} | ps2pdf - ${JOBNUM}-${JOBNAME}.pdf
   fi
   rm $i
-#  mv $i $i.org
 done
 

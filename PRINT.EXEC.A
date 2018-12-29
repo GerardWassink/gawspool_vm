@@ -1,0 +1,5 @@
+&CONTROL OFF NOMSG                                                              
+COPY &1 &2 &3 SEP PAGE A &1 PRINTFIL A                                          
+PRINT &1 PRINTFIL A                                                             
+ERASE &1 PRINTFIL A                                                             
+&EXIT 0                                                                         

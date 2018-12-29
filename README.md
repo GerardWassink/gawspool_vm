@@ -1,5 +1,5 @@
 # gawspool_vm
-This program will split VM printout txt files out of Hercules
+This program will split VM printout txt files out of Hercules and, optionally, will convert them to PDF.
 
 ## The printjob splitter
 For this to work, you download the gawspool_vm.c source to your computer and compile it with gcc. See to it that the resulting executable is in your path.

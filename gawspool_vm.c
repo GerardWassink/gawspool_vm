@@ -3,7 +3,7 @@
  * Author		:	Gerard Wassink
  * Date			:	December 2018
  *
- * Function		:	Split jobs out of VMnder Hercules
+ * Function		:	Split jobs out of VM under Hercules
  *
  * ------------------------------------------------------------------------ *
  * 						GNU LICENSE CONDITIONS

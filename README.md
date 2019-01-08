@@ -18,7 +18,7 @@ contains a directory where gawspool_vm will drop its splitted .txt files. The di
 
 ## VM/CMS side
 Regrettably at this time we have to make changes to CMS as well. Since VM does not generate an End-of-printjob seperator, we have to add one ourselves. We do that by creating our own PRINT command. Upload two files to CMS:
-- SEP.PAGE.A will go into SPE PAGE A
+- SEP.PAGE.A will go into SEP PAGE A
 - PINT.EXEC.A will go into PRINT EXEC A
 
 ## Result
